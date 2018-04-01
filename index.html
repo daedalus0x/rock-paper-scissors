@@ -6,7 +6,47 @@
 </head>
 <body>
   <script>
-  
+  let scorePlayer = 0;
+  let scoreComputer = 0;
+  let round = 0;
+
+  while (round !== 5) {
+    game();
+    round++;
+  }
+
+  console.log("RESULTS!");
+  console.log("Player rounds won: " + scorePlayer + " " + "Computer rounds won: " + scoreComputer);
+  if (scorePlayer > scoreComputer) {console.log("PLAYER WINS!");}
+  else if (scoreComputer > scorePlayer) {console.log("COMPUTER WINS!");}
+  else {console.log("IT'S A TIE!");}
+
+  function game(round) {
+    let playerSelection = prompt("Select rock, paper or scissors:")
+    playerSelection = playerSelection.toLowerCase();
+    const handSelection = ["rock", "paper", "scissors"];
+    let computerSelection = computerPlay(handSelection);
+
+    function computerPlay(handSelection) {
+      return handSelection[Math.floor(Math.random() * handSelection.length)];
+    }
+
+    console.log("You have " + playerSelection + ".");
+    console.log("Computer has " + computerSelection + ".");
+
+    if (playerSelection === computerSelection) { console.log("Tie!"); }
+    else if (playerSelection === "paper" && computerSelection === "rock") { console.log("You win! Paper beats Rock!"); scorePlayer++;}
+    else if (playerSelection === "scissors" && computerSelection === "rock") { console.log("You lose! Rock beats scissors!"); scoreComputer++;}
+
+    else if (playerSelection === "rock" && computerSelection === "paper") { console.log("You lose! Paper beats Rock!"); scoreComputer++;}
+    else if (playerSelection === "scissors" && computerSelection === "paper") { console.log("You win! Scissors beat Paper!"); scorePlayer++;}
+
+    else if (playerSelection === "rock" && computerSelection === "scissors") { console.log("You win! Rock beats Scissors!"); scorePlayer++;}
+    else if (playerSelection === "paper" && computerSelection === "scissors") { console.log("You lose! Scissors beat Paper!"); scoreComputer++;}
+
+    else {console.log("You have to select rock, paper or scissors!");}
+  }
+
   </script>
 <body>
 </html>
