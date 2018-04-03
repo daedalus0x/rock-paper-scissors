@@ -58,23 +58,23 @@
     document.getElementById("computer-score").innerHTML = "COMPUTER: " + scoreComputer;
 
     if (playerSelection === "paper" && computerSelection === "rock") {
-    scorePlayer++;
-    document.getElementById("player-score").innerHTML = "PLAYER: " + scorePlayer;}
+      scorePlayer++;
+      document.getElementById("player-score").innerHTML = "PLAYER: " + scorePlayer;}
     else if (playerSelection === "scissors" && computerSelection === "rock") {
-    scoreComputer++;
-    document.getElementById("computer-score").innerHTML = "COMPUTER: " + scoreComputer;}
+      scoreComputer++;
+      document.getElementById("computer-score").innerHTML = "COMPUTER: " + scoreComputer;}
     else if (playerSelection === "rock" && computerSelection === "paper") {
-    scoreComputer++;
-    document.getElementById("computer-score").innerHTML = "COMPUTER: " + scoreComputer;}
+      scoreComputer++;
+      document.getElementById("computer-score").innerHTML = "COMPUTER: " + scoreComputer;}
     else if (playerSelection === "scissors" && computerSelection === "paper") {
-    scorePlayer++;
-    document.getElementById("player-score").innerHTML = "PLAYER: " + scorePlayer;}
+      scorePlayer++;
+      document.getElementById("player-score").innerHTML = "PLAYER: " + scorePlayer;}
     else if (playerSelection === "rock" && computerSelection === "scissors") {
-    scorePlayer++;
-    document.getElementById("player-score").innerHTML = "PLAYER: " + scorePlayer;}
+      scorePlayer++;
+      document.getElementById("player-score").innerHTML = "PLAYER: " + scorePlayer;}
     else if (playerSelection === "paper" && computerSelection === "scissors") {
-    scoreComputer++;
-    document.getElementById("computer-score").innerHTML = "COMPUTER: " + scoreComputer;}
+      scoreComputer++;
+      document.getElementById("computer-score").innerHTML = "COMPUTER: " + scoreComputer;}
 
     if (scorePlayer === 5) {
       document.getElementById("player-score").innerHTML = "PLAYER: " + "WINNER!";
